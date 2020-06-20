@@ -13,6 +13,14 @@ class CoffeeMachine:
         self.exit = exit_
 
     def check_resources(self, water_c, milk_c, coffee_beans_c, disposable_cups_c) -> bool:
+        """
+        Checking coffee machine if it has enough resources to server coffee
+        :param water_c: int
+        :param milk_c: int
+        :param coffee_beans_c:int
+        :param disposable_cups_c:int
+        :return: bool
+        """
         if self.water < water_c:
             print("Sorry, not enough water!")
             return False
@@ -29,7 +37,9 @@ class CoffeeMachine:
             return True
 
     def choose_option(self, option) -> None:
-
+        """
+        Main menu
+        """
         if option == "buy":
             self.actual_state = 3
             self.serve_coffee(option)
@@ -47,6 +57,9 @@ class CoffeeMachine:
             self.print_menu()
 
     def fill_coffee_machine(self, option_) -> None:
+        """
+        Fill coffee machine
+        """
         option = int(option_)
         if self.added_ingredients == 0:
             self.water += option
@@ -71,6 +84,9 @@ class CoffeeMachine:
             self.actual_state = 0
 
     def on_off_machine(self):
+        """
+        Switching state of the machine
+        """
         if not self.exit:
             self.exit = True
         else:
