@@ -67,6 +67,8 @@ class CoffeeMachine:
             self.actual_state = 0
         else:
             self.added_ingredients = 0
+            self.print_menu()
+            self.actual_state = 0
 
     def on_off_machine(self):
         if not self.exit:
