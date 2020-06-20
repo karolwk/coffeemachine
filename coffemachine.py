@@ -77,8 +77,8 @@ class CoffeeMachine:
     def operate(self, user_input: str):
         """
         Main operate function changing state of machine, and passing input
-        :param user_input:
-        :return: Nothing
+        :param user_input:adads
+        :return: Nothing testada
         """
         if self.actual_state == 0:
             self.choose_option(user_input)
